@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reserva Confirmada — Rede Antidesperdício</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    h1, h2, h3, h4 { font-family: 'Outfit', sans-serif; }
+  </style>
+</head>
+<body class="bg-slate-900/60 backdrop-blur-sm min-h-screen flex items-center justify-center p-4">
+
+  <div class="bg-white w-full max-w-lg rounded-3xl p-8 shadow-2xl border border-slate-100 text-center animate-fade-in">
+    <!-- ÍCONE DE SUCESSO -->
+    <div class="w-20 h-20 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center text-4xl mx-auto mb-6 shadow-inner">
+      ✓
+    </div>
+
+    <span class="text-xs font-bold text-emerald-600 uppercase tracking-widest block mb-1">Reserva Efetuada com Sucesso!</span>
+    <h1 class="text-2xl font-extrabold text-slate-900 mb-2">Lote Garantido para Sua Entidade</h1>
+    <p class="text-xs text-slate-500 mb-6">Apresente este código ao feirante no momento da coleta para liberação dos alimentos.</p>
+
+    <!-- CAIXA DO CÓDIGO DE RESGATE -->
+    <div class="bg-slate-50 border-2 border-dashed border-emerald-400 p-6 rounded-2xl mb-6">
+      <span class="text-xs font-bold text-slate-400 block mb-1">CÓDIGO DE RESGATE SEGURO</span>
+      <div class="text-4xl font-mono font-black text-emerald-800 tracking-wider mb-2">#REDE-4819</div>
+      <button onclick="navigator.clipboard.writeText('#REDE-4819'); alert('Código copiado!')" class="text-xs font-bold text-emerald-700 bg-emerald-100 hover:bg-emerald-200 px-4 py-1.5 rounded-lg transition inline-flex items-center gap-1">
+        📋 Copiar Código
+      </button>
+    </div>
+
+    <!-- INFORMAÇÕES DA RETIRADA -->
+    <div class="text-left bg-slate-50 p-4 rounded-2xl border border-slate-100 text-xs text-slate-600 mb-6 space-y-2">
+      <div class="flex justify-between">
+        <span class="text-slate-400">Doador:</span>
+        <strong class="text-slate-800">Barraca do Seu Zé (Feira Vila Mariana)</strong>
+      </div>
+      <div class="flex justify-between">
+        <span class="text-slate-400">Endereço:</span>
+        <strong class="text-slate-800">Rua França Pinto, alt. 450</strong>
+      </div>
+      <div class="flex justify-between">
+        <span class="text-slate-400">Tolerância Máxima:</span>
+        <strong class="text-red-600 font-bold">Hoje até às 14:15</strong>
+      </div>
+    </div>
+
+    <!-- BOTÕES DE AÇÃO -->
+    <div class="space-y-3">
+      <a href="https://wa.me/5511999999999?text=Ol%C3%A1%20Seu%20Z%C3%A9%2C%20reservei%20o%20lote%20%23REDE-4819%20pela%20Rede%20Antidesperd%C3%ADcio" target="_blank" class="block w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3.5 rounded-xl shadow-md transition text-sm">
+        💬 Abrir WhatsApp do Feirante
+      </a>
+      <a href="tela-09-painel-ong.html" class="block w-full bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold py-3 rounded-xl transition text-sm">
+        Ir para Meu Painel de Coletas
+      </a>
+    </div>
+  </div>
+
+</body>
+</html>
