@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Painel do Doador — Rede Antidesperdício</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    h1, h2, h3, h4 { font-family: 'Outfit', sans-serif; }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased min-h-screen">
+
+  <header class="bg-white border-b border-slate-200 px-6 py-4 shadow-sm">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <a href="tela-01-landing-page.html" class="text-2xl p-2 bg-emerald-100 rounded-xl block">🍎</a>
+        <div>
+          <span class="font-extrabold text-xl text-slate-900 block leading-tight">Barraca do Seu Zé</span>
+          <span class="text-xs font-semibold text-emerald-600 uppercase tracking-widest">Painel do Feirante Doador</span>
+        </div>
+      </div>
+      <a href="tela-07-formulario-doacao.html" class="bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs px-4 py-2.5 rounded-xl transition">
+        + Anunciar Nova Sobra
+      </a>
+    </div>
+  </header>
+
+  <main class="max-w-7xl mx-auto px-6 py-8">
+    <!-- CARDS DE ESTATÍSTICA DO DOADOR -->
+    <div class="grid sm:grid-cols-3 gap-6 mb-8">
+      <div class="bg-white p-5 rounded-3xl border border-slate-200">
+        <span class="text-xs font-bold text-slate-400 block mb-1">TOTAL DOADO POR VOCÊ</span>
+        <div class="text-3xl font-black text-emerald-700">480 kg</div>
+      </div>
+      <div class="bg-white p-5 rounded-3xl border border-slate-200">
+        <span class="text-xs font-bold text-slate-400 block mb-1">FAMÍLIAS ALIMENTADAS</span>
+        <div class="text-3xl font-black text-amber-600">~960 pratos</div>
+      </div>
+      <div class="bg-white p-5 rounded-3xl border border-slate-200 flex items-center justify-between">
+        <div>
+          <span class="text-xs font-bold text-slate-400 block mb-1">SEU SELO SOLIDÁRIO</span>
+          <span class="text-sm font-extrabold text-slate-900">Nível Ouro 🏅</span>
+        </div>
+        <button onclick="alert('Certificado em PDF gerado para impressão!')" class="text-xs font-bold text-emerald-700 bg-emerald-50 px-3 py-1.5 rounded-xl border border-emerald-200 hover:bg-emerald-100">
+          Imprimir Selo
+        </button>
+      </div>
+    </div>
+
+    <!-- SEÇÃO DE VALIDAÇÃO DE CÓDIGO DA ONG -->
+    <div class="bg-emerald-900 text-white p-6 rounded-3xl mb-8 flex flex-col md:flex-row items-center justify-between gap-4">
+      <div>
+        <h3 class="font-bold text-lg mb-1">A ONG chegou para retirar os alimentos?</h3>
+        <p class="text-emerald-200 text-xs">Insira o código fornecido pelo voluntário para dar baixa no sistema.</p>
+      </div>
+      <div class="flex items-center gap-2 w-full md:w-auto">
+        <input type="text" placeholder="#REDE-XXXX" class="px-4 py-2.5 rounded-xl text-slate-900 font-mono font-bold text-sm focus:outline-none w-40 text-center uppercase">
+        <button onclick="alert('Entrega confirmada com sucesso! Alimentos computados nas métricas ESG.')" class="bg-emerald-500 hover:bg-emerald-400 text-emerald-950 font-black px-5 py-2.5 rounded-xl text-sm transition">
+          Confirmar Baixa
+        </button>
+      </div>
+    </div>
+
+    <!-- ABAS DE STATUS -->
+    <div class="flex border-b border-slate-200 mb-6 gap-6 text-sm font-bold">
+      <button class="border-b-2 border-emerald-600 text-emerald-700 pb-3">Aguardando Retirada (1)</button>
+      <button class="text-slate-400 hover:text-slate-700 pb-3">Disponíveis no Mural (1)</button>
+      <button class="text-slate-400 hover:text-slate-700 pb-3">Histórico Concluído (14)</button>
+    </div>
+
+    <!-- LISTA DE LOTES EM ANDAMENTO -->
+    <div class="space-y-4">
+      <div class="bg-white p-6 rounded-3xl border border-slate-200 flex flex-col md:flex-row items-center justify-between gap-4">
+        <div class="flex items-center gap-4">
+          <div class="w-14 h-14 bg-amber-100 rounded-2xl flex items-center justify-center text-3xl">🍅</div>
+          <div>
+            <div class="flex items-center gap-2 mb-1">
+              <span class="text-xs font-black bg-amber-100 text-amber-800 px-2 py-0.5 rounded-md">RESERVADO</span>
+              <span class="text-xs text-slate-400">Reservado pela Cozinha Comunitária Esperança</span>
+            </div>
+            <h4 class="font-extrabold text-base text-slate-900">25 kg de Tomates e Folhagens</h4>
+            <span class="text-xs text-red-600 font-bold">Tolerância até 14:15 de hoje</span>
+          </div>
+        </div>
+        <div class="flex items-center gap-3 w-full md:w-auto justify-end">
+          <span class="text-xs font-mono font-bold text-slate-500 bg-slate-100 px-3 py-2 rounded-xl">Código Esperado: #REDE-4819</span>
+          <button onclick="alert('Baixa confirmada!')" class="bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs px-4 py-2.5 rounded-xl transition">
+            Liberar Alimento
+          </button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+</body>
+</html>
