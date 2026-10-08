@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Publicar Doação Rápida — Rede Antidesperdício</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    h1, h2, h3, h4 { font-family: 'Outfit', sans-serif; }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased min-h-screen p-4 sm:p-6 flex flex-col justify-between">
+
+  <header class="max-w-xl mx-auto w-full flex items-center justify-between mb-6">
+    <a href="tela-02-feed-doacoes.html" class="text-sm font-bold text-slate-500 hover:text-slate-800">✕ Cancelar</a>
+    <span class="text-xs font-bold bg-amber-100 text-amber-800 px-3 py-1 rounded-full">⏱️ Cadastro em 45s</span>
+  </header>
+
+  <main class="max-w-xl mx-auto w-full bg-white rounded-3xl border border-slate-200 p-6 sm:p-8 shadow-sm">
+    <div class="mb-6">
+      <h1 class="text-2xl font-black text-slate-900 mb-1">Nova Doação de Excedente</h1>
+      <p class="text-xs text-slate-500">Avise as ONGs vizinhas antes de fechar sua barraca ou turno.</p>
+    </div>
+
+    <form class="space-y-6">
+      <!-- 1. CATEGORIA COM ÍCONES GRANDES -->
+      <div>
+        <label class="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">1. Tipo do Alimento</label>
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-2">
+          <button type="button" class="p-3 bg-emerald-50 border-2 border-emerald-500 rounded-2xl flex flex-col items-center justify-center text-center">
+            <span class="text-3xl mb-1">🍎</span>
+            <span class="text-xs font-bold text-emerald-900">Hortifrúti</span>
+          </button>
+          <button type="button" class="p-3 bg-slate-50 hover:bg-slate-100 border border-slate-200 rounded-2xl flex flex-col items-center justify-center text-center">
+            <span class="text-3xl mb-1">🍞</span>
+            <span class="text-xs font-semibold text-slate-700">Padaria</span>
+          </button>
+          <button type="button" class="p-3 bg-slate-50 hover:bg-slate-100 border border-slate-200 rounded-2xl flex flex-col items-center justify-center text-center">
+            <span class="text-3xl mb-1">🍲</span>
+            <span class="text-xs font-semibold text-slate-700">Refeição</span>
+          </button>
+          <button type="button" class="p-3 bg-slate-50 hover:bg-slate-100 border border-slate-200 rounded-2xl flex flex-col items-center justify-center text-center">
+            <span class="text-3xl mb-1">📦</span>
+            <span class="text-xs font-semibold text-slate-700">Outros</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- 2. QUANTIDADE RÁPIDA -->
+      <div>
+        <label class="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">2. Quantidade Aproximada (KG)</label>
+        <div class="flex items-center gap-2 mb-2">
+          <input type="number" value="20" class="w-24 text-center font-black text-2xl py-2 bg-slate-50 border border-slate-200 rounded-2xl focus:outline-none focus:ring-2 focus:ring-emerald-500">
+          <span class="font-bold text-slate-500 text-sm">Quilos</span>
+        </div>
+        <div class="flex gap-2">
+          <button type="button" class="text-xs font-bold px-3 py-1.5 bg-slate-100 hover:bg-slate-200 rounded-xl">+5 kg</button>
+          <button type="button" class="text-xs font-bold px-3 py-1.5 bg-emerald-100 text-emerald-800 rounded-xl">+10 kg</button>
+          <button type="button" class="text-xs font-bold px-3 py-1.5 bg-slate-100 hover:bg-slate-200 rounded-xl">+25 kg</button>
+          <button type="button" class="text-xs font-bold px-3 py-1.5 bg-slate-100 hover:bg-slate-200 rounded-xl">+50 kg</button>
+        </div>
+      </div>
+
+      <!-- 3. HORÁRIO LIMITE IMPRORROGÁVEL -->
+      <div>
+        <label class="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">3. Retirar Até Que Horas?</label>
+        <div class="grid grid-cols-3 gap-2">
+          <button type="button" class="p-2.5 bg-red-50 border border-red-300 text-red-800 font-bold text-xs rounded-xl text-center">
+            Hoje às 14:00
+          </button>
+          <button type="button" class="p-2.5 bg-slate-50 hover:bg-slate-100 border border-slate-200 font-medium text-slate-700 text-xs rounded-xl text-center">
+            Hoje às 15:00
+          </button>
+          <button type="button" class="p-2.5 bg-slate-50 hover:bg-slate-100 border border-slate-200 font-medium text-slate-700 text-xs rounded-xl text-center">
+            Hoje às 18:00
+          </button>
+        </div>
+      </div>
+
+      <!-- 4. DESCRIÇÃO RÁPIDA -->
+      <div>
+        <label class="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-1">4. O que tem no lote?</label>
+        <input type="text" value="3 caixas de verduras mistas e bananas maduras" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500">
+      </div>
+
+      <!-- BOTÃO DE ENVIO -->
+      <a href="tela-08-painel-doador.html" class="block w-full bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold py-4 rounded-2xl text-center shadow-xl shadow-emerald-600/30 transition text-base">
+        🚀 Publicar Doação Imediatamente
+      </a>
+    </form>
+  </main>
+
+  <footer class="text-center text-xs text-slate-400 py-4">
+    Rede Antidesperdício • Mobile First para Feirantes
+  </footer>
+
+</body>
+</html>

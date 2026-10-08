@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feed de Doações — Rede Antidesperdício</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    h1, h2, h3, h4 { font-family: 'Outfit', sans-serif; }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased min-h-screen">
+
+  <!-- NAVBAR -->
+  <header class="bg-white sticky top-0 z-50 border-b border-slate-200 px-6 py-4 shadow-sm">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <a href="tela-01-landing-page.html" class="text-2xl p-2 bg-emerald-100 rounded-xl block">🌿</a>
+        <div>
+          <span class="font-extrabold text-xl text-slate-900 block leading-tight">Mural de Doações</span>
+          <span class="text-xs font-semibold text-emerald-600 uppercase tracking-widest">Tempo Real • Raio 5km</span>
+        </div>
+      </div>
+      <div class="flex items-center gap-3">
+        <a href="tela-07-formulario-doacao.html" class="bg-emerald-600 hover:bg-emerald-700 text-white font-semibold text-sm px-4 py-2 rounded-xl transition">
+          + Nova Doação
+        </a>
+        <a href="tela-09-painel-ong.html" class="bg-slate-100 hover:bg-slate-200 text-slate-700 font-semibold text-sm px-4 py-2 rounded-xl transition">
+          Minhas Reservas
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- FILTROS E BUSCA -->
+  <div class="max-w-7xl mx-auto px-6 py-6">
+    <div class="flex flex-col md:flex-row gap-4 items-center justify-between mb-6">
+      <div class="relative w-full md:w-96">
+        <span class="absolute inset-y-0 left-0 flex items-center pl-3 text-slate-400">🔍</span>
+        <input type="text" placeholder="Buscar por alimento ou bairro..." class="w-full pl-10 pr-4 py-3 bg-white border border-slate-200 rounded-2xl text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500">
+      </div>
+      <!-- PÍLULAS DE CATEGORIA -->
+      <div class="flex items-center gap-2 overflow-x-auto w-full md:w-auto pb-2 md:pb-0">
+        <button class="bg-emerald-700 text-white font-semibold px-4 py-2 rounded-xl text-xs whitespace-nowrap shadow-sm">Todos (8)</button>
+        <button class="bg-white hover:bg-emerald-50 text-slate-700 font-medium px-4 py-2 rounded-xl text-xs border border-slate-200 whitespace-nowrap">🍎 Hortifrúti (4)</button>
+        <button class="bg-white hover:bg-emerald-50 text-slate-700 font-medium px-4 py-2 rounded-xl text-xs border border-slate-200 whitespace-nowrap">🍞 Padaria (2)</button>
+        <button class="bg-white hover:bg-emerald-50 text-slate-700 font-medium px-4 py-2 rounded-xl text-xs border border-slate-200 whitespace-nowrap">🍲 Refeições (1)</button>
+        <button class="bg-white hover:bg-emerald-50 text-slate-700 font-medium px-4 py-2 rounded-xl text-xs border border-slate-200 whitespace-nowrap">📦 Mercearia (1)</button>
+      </div>
+    </div>
+
+    <!-- BANNER DE URGÊNCIA -->
+    <div class="bg-amber-50 border border-amber-200 rounded-2xl p-4 flex items-center justify-between mb-8">
+      <div class="flex items-center gap-3">
+        <span class="text-2xl">⏳</span>
+        <div>
+          <span class="font-bold text-amber-900 text-sm block">Feira da Vila Mariana terminando agora!</span>
+          <span class="text-xs text-amber-700">3 lotes expiram nos próximos 45 minutos. Priorize resgates urgentes.</span>
+        </div>
+      </div>
+      <button class="text-xs font-bold bg-amber-500 text-white px-3 py-1.5 rounded-lg hover:bg-amber-600 transition whitespace-nowrap">Ver Urgentes</button>
+    </div>
+
+    <!-- GRADE DE CARDS DE DOAÇÃO -->
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+      <!-- CARD 1 -->
+      <div class="bg-white rounded-3xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-md transition flex flex-col justify-between">
+        <div>
+          <div class="relative h-48 bg-emerald-100 flex items-center justify-center text-6xl">
+            🍅🥬
+            <span class="absolute top-3 left-3 bg-red-500 text-white text-[11px] font-black px-2.5 py-1 rounded-full uppercase tracking-wider animate-pulse">
+              ⏰ Urgente • 35 min
+            </span>
+            <span class="absolute top-3 right-3 bg-white/90 backdrop-blur-sm text-slate-800 text-xs font-bold px-2.5 py-1 rounded-full">
+              🍎 Hortifrúti
+            </span>
+          </div>
+          <div class="p-5">
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-xs font-bold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-md">25 kg estimados</span>
+              <span class="text-xs text-slate-400">1.2 km de distância</span>
+            </div>
+            <h3 class="font-extrabold text-lg text-slate-900 mb-1 leading-snug">Caixa de Tomates Maduros e Folhagens Frescas</h3>
+            <p class="text-xs text-slate-500 mb-4">Barraca do Seu Zé • Feira Livre Vila Mariana (Rua França Pinto)</p>
+            <div class="bg-slate-50 p-3 rounded-xl border border-slate-100 text-xs text-slate-600 space-y-1">
+              <div class="flex justify-between">
+                <span>Horário Limite:</span>
+                <strong class="text-red-600">Hoje até 14:15</strong>
+              </div>
+              <div class="flex justify-between">
+                <span>Estado:</span>
+                <span class="text-slate-800 font-medium">Maduro para molho / consumo imediato</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="p-5 pt-0 flex gap-2">
+          <a href="tela-04-detalhes-lote.html" class="w-1/2 text-center text-xs font-bold text-slate-700 bg-slate-100 hover:bg-slate-200 py-3 rounded-xl transition">
+            Detalhes
+          </a>
+          <a href="tela-05-modal-reserva.html" class="w-1/2 text-center text-xs font-bold text-white bg-emerald-600 hover:bg-emerald-700 py-3 rounded-xl shadow-md transition">
+            Reservar Agora
+          </a>
+        </div>
+      </div>
+
+      <!-- CARD 2 -->
+      <div class="bg-white rounded-3xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-md transition flex flex-col justify-between">
+        <div>
+          <div class="relative h-48 bg-amber-100 flex items-center justify-center text-6xl">
+            🥖🥐
+            <span class="absolute top-3 left-3 bg-amber-500 text-white text-[11px] font-black px-2.5 py-1 rounded-full uppercase tracking-wider">
+              Hoje até 16h
+            </span>
+            <span class="absolute top-3 right-3 bg-white/90 backdrop-blur-sm text-slate-800 text-xs font-bold px-2.5 py-1 rounded-full">
+              🍞 Padaria
+            </span>
+          </div>
+          <div class="p-5">
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-xs font-bold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-md">18 kg estimados</span>
+              <span class="text-xs text-slate-400">2.5 km de distância</span>
+            </div>
+            <h3 class="font-extrabold text-lg text-slate-900 mb-1 leading-snug">Pães Franceses e Broas do Dia Anterior</h3>
+            <p class="text-xs text-slate-500 mb-4">Padaria Estrela do Bairro • Bela Vista</p>
+            <div class="bg-slate-50 p-3 rounded-xl border border-slate-100 text-xs text-slate-600 space-y-1">
+              <div class="flex justify-between">
+                <span>Horário Limite:</span>
+                <strong class="text-slate-800">Hoje até 16:00</strong>
+              </div>
+              <div class="flex justify-between">
+                <span>Estado:</span>
+                <span class="text-slate-800 font-medium">Embalado e próprio para consumo</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="p-5 pt-0 flex gap-2">
+          <a href="tela-04-detalhes-lote.html" class="w-1/2 text-center text-xs font-bold text-slate-700 bg-slate-100 hover:bg-slate-200 py-3 rounded-xl transition">
+            Detalhes
+          </a>
+          <a href="tela-05-modal-reserva.html" class="w-1/2 text-center text-xs font-bold text-white bg-emerald-600 hover:bg-emerald-700 py-3 rounded-xl shadow-md transition">
+            Reservar Agora
+          </a>
+        </div>
+      </div>
+
+      <!-- CARD 3 -->
+      <div class="bg-white rounded-3xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-md transition flex flex-col justify-between">
+        <div>
+          <div class="relative h-48 bg-orange-100 flex items-center justify-center text-6xl">
+            🍲🥘
+            <span class="absolute top-3 left-3 bg-red-500 text-white text-[11px] font-black px-2.5 py-1 rounded-full uppercase tracking-wider animate-pulse">
+              ⏰ Urgente • 20 min
+            </span>
+            <span class="absolute top-3 right-3 bg-white/90 backdrop-blur-sm text-slate-800 text-xs font-bold px-2.5 py-1 rounded-full">
+              🍲 Refeições
+            </span>
+          </div>
+          <div class="p-5">
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-xs font-bold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-md">35 marmitas</span>
+              <span class="text-xs text-slate-400">0.8 km de distância</span>
+            </div>
+            <h3 class="font-extrabold text-lg text-slate-900 mb-1 leading-snug">Marmitas Seladas de Arroz, Feijão e Legumes</h3>
+            <p class="text-xs text-slate-500 mb-4">Restaurante Sabor da Terra • Paraíso</p>
+            <div class="bg-slate-50 p-3 rounded-xl border border-slate-100 text-xs text-slate-600 space-y-1">
+              <div class="flex justify-between">
+                <span>Horário Limite:</span>
+                <strong class="text-red-600">Hoje até 14:00</strong>
+              </div>
+              <div class="flex justify-between">
+                <span>Estado:</span>
+                <span class="text-slate-800 font-medium">Mantidas aquecidas e higienizadas</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="p-5 pt-0 flex gap-2">
+          <a href="tela-04-detalhes-lote.html" class="w-1/2 text-center text-xs font-bold text-slate-700 bg-slate-100 hover:bg-slate-200 py-3 rounded-xl transition">
+            Detalhes
+          </a>
+          <a href="tela-05-modal-reserva.html" class="w-1/2 text-center text-xs font-bold text-white bg-emerald-600 hover:bg-emerald-700 py-3 rounded-xl shadow-md transition">
+            Reservar Agora
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</body>
+</html>
