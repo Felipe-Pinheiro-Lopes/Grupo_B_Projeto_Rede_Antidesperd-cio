@@ -3,7 +3,7 @@
 > **Projeto de Frameworks Front-end (SENAI)**  
 > **Grupo B:** Felipe Pinheiro Lopes, Anthony e Nicolas  
 > **Tema:** ODS 2 — Fome Zero e Agricultura Sustentável (interseção com ODS 12.3)  
-> **Deploy Front-end:** [Acessar Vercel](https://grupo-b-projeto-rede-antidesperdicio.vercel.app/) | **Deploy API Back-end:** [Acessar Render](https://grupo-b-projeto-rede-antidesperdicio.onrender.com/) | **Protótipo / Documentação de Telas:** [Visualizar 10 Telas](./docs/06%20-%20Prototipação%20e%20Arquitetura%20de%20Telas.md)
+> **Deploy Front-end:** [Acessar Vercel](https://front-dusky-eight-87.vercel.app/) | **Deploy API Back-end:** [Acessar Render](https://grupo-b-projeto-rede-antidesperd-cio.onrender.com/) | **Protótipo / Documentação de Telas:** [Visualizar 10 Telas](./docs/06%20-%20Prototipação%20e%20Arquitetura%20de%20Telas.md)
 
 ---
 
@@ -164,7 +164,7 @@ A equipe realizou uma análise comparativa aprofundada de 5 plataformas consolid
 | **RNF01** | Responsividade (Mobile-First) | A interface do usuário deve se adaptar de forma fluida a qualquer tamanho de tela (smartphones a partir de 360px de largura até desktops 4K), com prioridade para dispositivos móveis usados nas feiras. |
 | **RNF02** | Acessibilidade (WCAG 2.1 AA) | A aplicação deve seguir diretrizes de acessibilidade, mantendo contraste mínimo de 4.5:1 em textos, navegação por teclado e rótulos semânticos (`aria-label`) para leitores de tela. |
 | **RNF03** | Desempenho e Velocidade de Carregamento | O tempo de carregamento inicial (First Contentful Paint) não deve ultrapassar 1.8 segundos em redes 4G simuladas, e a pontuação no Google Lighthouse deve ser superior a 90 em Performance e Boas Práticas. |
-| **RNF04** | Arquitetura e Framework Front-end | O front-end deve ser desenvolvido em React com Vite, utilizando componentes modulares, estados previsíveis e design tokens limpos em Vanilla CSS. |
+| **RNF04** | Arquitetura e Framework Front-end | O front-end deve ser desenvolvido em Next.js (React), utilizando componentes modulares, renderização otimizada e design tokens limpos em Vanilla CSS. |
 | **RNF05** | Persistência e Simplicidade do Back-end | O back-end deve ser leve, desenvolvido em Node.js/Express, persistindo os dados em banco de dados SQLite local, com endpoints RESTful bem documentados. |
 | **RNF06** | Disponibilidade e Deploy Contínuo | O front-end deve estar hospedado e acessível publicamente via Vercel com HTTPS habilitado por padrão, enquanto o back-end deve estar rodando na nuvem do Render. |
 | **RNF07** | Usabilidade e Carga Cognitiva Reduzida | O fluxo de publicação de uma doação por um feirante deve exigir no máximo 4 toques na tela e ser concluído em menos de 45 segundos. |
@@ -260,7 +260,7 @@ Histórias de usuário formalizadas com critérios objetivos de validação em f
 
 ## 🛠️ Tecnologias Utilizadas
 
-* **Front-end:** React 18, Vite, Vanilla CSS com Design Tokens modernos, Lucide React Icons.
+* **Front-end:** Next.js (React), Vanilla CSS com Design Tokens modernos, Lucide React Icons.
 * **Back-end:** Node.js, Express.js, CORS.
 * **Banco de Dados:** SQLite (`better-sqlite3`), leve, rápido e embarcado no repositório.
 * **Versionamento & Governança:** Git, GitHub Projects (Kanban), Obsidian (Gestão de Conhecimento PKM).
@@ -270,12 +270,12 @@ Histórias de usuário formalizadas com critérios objetivos de validação em f
 
 ## 💻 Framework Utilizado
 
-### **React com Vite**
-A equipe escolheu o framework **React 18** com a ferramenta de build **Vite** pelos seguintes motivos técnicos:
-1. **Renderização Reativa e Alta Performance:** O Virtual DOM do React permite atualizações instantâneas no Feed de Doações e no Dashboard ESG sem recarregar a página.
+### **Next.js (React Framework)**
+A equipe escolheu o framework **Next.js** (baseado em **React**) pelos seguintes motivos técnicos:
+1. **Renderização Reativa e Híbrida:** Suporte a Server Components e Client Components para atualizações instantâneas no Feed de Doações e no Dashboard ESG sem recarregamentos desnecessários.
 2. **Modularização em Componentes Atômicos:** Facilita o reuso de botões, cards, modais e formulários construídos pela equipe.
-3. **Desenvolvimento Ultrarrápido (Vite HMR):** Substituição de módulos em tempo real (*Hot Module Replacement*) para máxima produtividade no desenvolvimento.
-4. **Core Web Vitals Impecáveis:** O bundle gerado pelo Vite é extremamente enxuto, garantindo tempo de carregamento inicial (FCP) inferior a 1.5 segundos.
+3. **Roteamento e Otimização Nativa:** Sistema de roteamento moderno baseado no App Router/Pages com Fast Refresh para máxima produtividade.
+4. **Core Web Vitals Impecáveis:** Otimização automática de fontes, scripts e imagens, garantindo tempo de carregamento inicial (FCP) inferior a 1.5 segundos e pontuação máxima no Lighthouse.
 
 ---
 
@@ -301,12 +301,12 @@ npm run dev
 
 # O servidor rodará na porta http://localhost:3001
 
-# 4. Em um novo terminal, executando o Front-end (React + Vite)
+# 4. Em um novo terminal, executando o Front-end (Next.js)
 cd ../frontend
 npm install
 npm run dev
 
-# A aplicação web estará acessível em http://localhost:5173
+# A aplicação web estará acessível em http://localhost:3000
 ```
 
 ---
@@ -352,8 +352,8 @@ flowchart TD
 
 ## 🌐 Aplicação
 
-* **URL da Aplicação Web (Front-end Vercel):** [https://grupo-b-projeto-rede-antidesperdicio.vercel.app/](https://grupo-b-projeto-rede-antidesperdicio.vercel.app/)
-* **URL da API REST (Back-end Render):** [https://grupo-b-projeto-rede-antidesperdicio.onrender.com/](https://grupo-b-projeto-rede-antidesperdicio.onrender.com/)
+* **URL da Aplicação Web (Front-end Vercel):** [https://front-dusky-eight-87.vercel.app/](https://front-dusky-eight-87.vercel.app/)
+* **URL da API REST (Back-end Render):** [https://grupo-b-projeto-rede-antidesperd-cio.onrender.com/](https://grupo-b-projeto-rede-antidesperd-cio.onrender.com/)
 * **URL do Repositório Git:** [https://github.com/Felipe-Pinheiro-Lopes/Grupo_B_Projeto_Rede_Antidesperd-cio](https://github.com/Felipe-Pinheiro-Lopes/Grupo_B_Projeto_Rede_Antidesperd-cio)
 * **URL do Protótipo / Documentação de Telas:** [Visualizar Documento de 10 Telas](https://github.com/Felipe-Pinheiro-Lopes/Grupo_B_Projeto_Rede_Antidesperd-cio/blob/main/docs/06%20-%20Prototipa%C3%A7%C3%A3o%20e%20Arquitetura%20de%20Telas.md)
 
@@ -397,7 +397,7 @@ A equipe utilizou a metodologia Kanban (organizada via GitHub Projects e Obsidia
 | **29** | Prototipação UI | Desenhar estrutura da Tela 10 (Mapa Interativo) | Felipe Lopes | Concluído |
 | **30** | Design System | Definir paleta de cores biofílica ESG (Emerald/Amber) | Anthony | Concluído |
 | **31** | Design System | Configurar tipografia moderna (Outfit e Inter) | Nicolas | Concluído |
-| **32** | Setup de Código | Inicializar projeto Front-end React com Vite | Felipe Lopes | Concluído |
+| **32** | Setup de Código | Inicializar projeto Front-end com Next.js | Felipe Lopes | Concluído |
 | **33** | Setup de Código | Configurar biblioteca de ícones Lucide React | Anthony | Concluído |
 | **34** | Back-end | Inicializar servidor Node.js com Express | Nicolas | Concluído |
 | **35** | Back-end | Configurar banco de dados SQLite local (`better-sqlite3`) | Nicolas | Concluído |
@@ -445,7 +445,7 @@ O desenvolvimento seguiu o padrão de *Conventional Commits*, registrando 32 com
 15. feat(api): adiciona rota get /api/metrics/esg para consolidacao de impacto
 
 # Bloco C: Engenharia Front-end & UI (Commits 16-26)
-16. feat(ui): inicializa projeto react com vite e estrutura modular
+16. feat(ui): inicializa projeto front-end com next.js e estrutura modular
 17. style(theme): cria design tokens com paleta biofilica esg e tipografia outfit
 18. feat(ui): implementa navbar de navegacao com badges e logo responsivo
 19. feat(ui): implementa hero banner institucional com manifesto fome zero
@@ -480,7 +480,7 @@ Em conformidade com as diretrizes de transparência e governança no uso de Inte
 1. **Ideação e Pesquisa ESG:** Levantamento estatístico sobre o descarte de 27 milhões de toneladas de alimentos no Brasil e síntese da Lei Federal 14.016/2020.
 2. **Engenharia de Requisitos:** Formatação ágil dos 10 Requisitos Funcionais, 10 Não-Funcionais e matriz de rastreabilidade.
 3. **Prototipação e Gestão:** Geração dos diagramas Mermaid de fluxo e apoio na estruturação dos 52 cards do backlog Kanban.
-4. **Desenvolvimento de Código:** Geração de boilerplate inicial para Express e React/Vite, acelerando a fase de setup.
+4. **Desenvolvimento de Código:** Geração de boilerplate inicial para Express e Next.js, acelerando a fase de setup.
 
 > **Declaração de Responsabilidade:** O uso de Inteligência Artificial foi restrito às atividades de assistência de escrita e produtividade técnica. Toda a tomada de decisão estratégica, arquitetura do sistema, design visual e responsabilidade final pelo código pertencem exclusivamente ao **Grupo B**.
 
@@ -488,7 +488,7 @@ Em conformidade com as diretrizes de transparência e governança no uso de Inte
 
 ## 👥 Integrantes (Grupo B)
 
-* **Felipe Pinheiro Lopes** — *Líder do Projeto, Arquitetura Front-end (React/Vite), Lógica de Integração REST e Deploy Vercel.*
+* **Felipe Pinheiro Lopes** — *Líder do Projeto, Arquitetura Front-end (Next.js), Lógica de Integração REST e Deploy Vercel.*
 * **Anthony** — *Design System ESG (Tokens CSS), UI Components, Telas do Doador/Feed, Responsividade e Acessibilidade.*
 * **Nicolas** — *Engenharia Back-end (Node.js/Express), Banco de Dados SQLite, APIs RESTful e Deploy Render.*
 

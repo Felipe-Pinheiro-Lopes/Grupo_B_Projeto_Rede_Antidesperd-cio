@@ -46,7 +46,7 @@ flowchart LR
 ## 💻 2. Stack Tecnológica Detalhada
 
 ### Front-end (Foco em Complexidade e Excelência Visual)
-* **Framework:** React 18 / 19 com Vite (build ultrarrápido) ou Next.js App Router.
+* **Framework:** Next.js (React) com App Router e Server/Client Components.
 * **Estilização & Design System:** Vanilla CSS com Design Tokens modernos / CSS Modules (variáveis para cores biofílicas, dark/light contrast, glassmorphism e microanimações fluidas).
 * **Ícones:** Lucide React (ícones semânticos, leves e de alto padrão).
 * **Roteamento & Telas:** Roteamento por abas/páginas SPA com estado centralizado para garantir velocidade e ausência de recarregamento.
@@ -119,5 +119,5 @@ CREATE TABLE IF NOT EXISTS ongs (
    - Configurar variável de ambiente `PORT=3001`.
 2. **Deploy no Vercel (Front-end):**
    - Importar o projeto no dashboard do Vercel.
-   - Variável de ambiente `VITE_API_URL=https://rede-antidesperdicio-api.onrender.com`.
+   - Variável de ambiente `NEXT_PUBLIC_API_URL=https://rede-antidesperdicio-api.onrender.com`.
    - Deploy automático a cada push na branch principal.
