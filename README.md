@@ -295,14 +295,14 @@ git clone https://github.com/Felipe-Pinheiro-Lopes/Grupo_B_Projeto_Rede_Antidesp
 cd Grupo_B_Projeto_Rede_Antidesperd-cio
 
 # 3. Executando a API Back-end (Node.js + Express + SQLite)
-cd backend
+cd Back
 npm install
 npm run dev
 
 # O servidor rodará na porta http://localhost:3001
 
 # 4. Em um novo terminal, executando o Front-end (Next.js)
-cd ../frontend
+cd ../Front
 npm install
 npm run dev
 
