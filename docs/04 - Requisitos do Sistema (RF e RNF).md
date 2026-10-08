@@ -39,7 +39,7 @@ tags:
 | **RNF01** | Responsividade (Mobile-First) | A interface do usuário deve se adaptar de forma fluida a qualquer tamanho de tela (smartphones a partir de 360px de largura até desktops 4K), com prioridade para dispositivos móveis usados nas feiras. |
 | **RNF02** | Acessibilidade (WCAG 2.1 AA) | A aplicação deve seguir diretrizes de acessibilidade, mantendo contraste mínimo de 4.5:1 em textos, navegação por teclado e rótulos semânticos (`aria-label`) para leitores de tela. |
 | **RNF03** | Desempenho e Velocidade de Carregamento | O tempo de carregamento inicial (First Contentful Paint) não deve ultrapassar 1.8 segundos em redes 4G simuladas, e a pontuação no Google Lighthouse deve ser superior a 90 em Performance e Boas Práticas. |
-| **RNF04** | Arquitetura e Framework Front-end | O front-end deve ser desenvolvido em React com Vite ou Next.js, utilizando componentes modulares, estados previsíveis e design tokens limpos. |
+| **RNF04** | Arquitetura e Framework Front-end | O front-end deve ser desenvolvido em Next.js (React), utilizando componentes modulares, renderização otimizada e design tokens limpos em Vanilla CSS. |
 | **RNF05** | Persistência e Simplicidade do Back-end | O back-end deve ser leve, desenvolvido em Node.js/Express, persistindo os dados em banco de dados SQLite local, com endpoints RESTful bem documentados. |
 | **RNF06** | Disponibilidade e Deploy Contínuo | O front-end deve estar hospedado e acessível publicamente via Vercel com HTTPS habilitado por padrão, enquanto o back-end deve estar rodando na nuvem do Render. |
 | **RNF07** | Usabilidade e Carga Cognitiva Reduzida | O fluxo de publicação de uma doação por um feirante deve exigir no máximo 4 toques na tela e ser concluído em menos de 60 segundos. |

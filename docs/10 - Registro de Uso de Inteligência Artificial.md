@@ -46,5 +46,5 @@ Em conformidade com a Seção 12 do regulamento do Hackathon, o **Grupo B** adot
 - **Intervenção Humana:** Atribuição dos responsáveis (Felipe, Anthony e Nicolas) e estimativas de esforço.
 
 ### 4. Codificação e Deploy
-- **Aplicação da IA:** Criação do boilerplate do servidor Express com SQLite e componentes atômicos em React/Vite.
+- **Aplicação da IA:** Criação do boilerplate do servidor Express com SQLite e componentes atômicos em Next.js.
 - **Intervenção Humana:** Conexão dos componentes, ajustes finos de layout responsivo, acessibilidade e publicação no Vercel e Render.
