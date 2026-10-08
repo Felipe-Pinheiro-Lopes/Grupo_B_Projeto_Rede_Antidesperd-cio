@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hub de Prototipação — Rede Antidesperdício (Grupo B)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #059669;
+      --primary-dark: #047857;
+      --accent: #d97706;
+      --bg: #0f172a;
+      --surface: #1e293b;
+      --surface-light: #334155;
+      --text: #f8fafc;
+      --text-muted: #94a3b8;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      overflow: hidden;
+    }
+    header {
+      background: var(--surface);
+      border-bottom: 1px solid var(--surface-light);
+      padding: 12px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      z-index: 10;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .logo-icon {
+      font-size: 26px;
+      background: rgba(16, 185, 129, 0.2);
+      border: 1px solid var(--primary);
+      width: 44px;
+      height: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 12px;
+    }
+    .brand h1 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.15rem;
+      color: #fff;
+    }
+    .brand span {
+      font-size: 0.75rem;
+      color: #34d399;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .controls {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    select {
+      background: var(--surface-light);
+      color: #fff;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 8px 16px;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      cursor: pointer;
+      font-family: inherit;
+      outline: none;
+    }
+    .device-toggle {
+      display: flex;
+      background: var(--surface-light);
+      padding: 4px;
+      border-radius: 8px;
+      gap: 4px;
+    }
+    .toggle-btn {
+      background: transparent;
+      border: none;
+      color: var(--text-muted);
+      padding: 6px 14px;
+      border-radius: 6px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .toggle-btn.active {
+      background: var(--primary);
+      color: #fff;
+    }
+    .main-viewport {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      background: radial-gradient(circle at 50% 20%, #1e293b 0%, #0f172a 100%);
+      overflow: hidden;
+    }
+    .screen-wrapper {
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7);
+      background: #fff;
+      border-radius: 16px;
+      overflow: hidden;
+      border: 6px solid #334155;
+      display: flex;
+      flex-direction: column;
+    }
+    .screen-wrapper.mobile {
+      width: 390px;
+      height: 844px;
+      max-height: 90vh;
+      border-radius: 40px;
+      border: 10px solid #1e293b;
+    }
+    .screen-wrapper.desktop {
+      width: 100%;
+      max-width: 1280px;
+      height: 100%;
+      max-height: 90vh;
+      border-radius: 12px;
+    }
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      background: #fff;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="brand">
+      <div class="logo-icon">🌿</div>
+      <div>
+        <h1>Protótipo de Telas — Rede Antidesperdício</h1>
+        <span>Hackathon Grupo B • ODS 2 Fome Zero • 10 Telas</span>
+      </div>
+    </div>
+
+    <div class="controls">
+      <label for="screenSelect" style="font-size: 0.85rem; color: var(--text-muted);">Selecionar Tela:</label>
+      <select id="screenSelect" onchange="changeScreen(this.value)">
+        <option value="tela-01-landing-page.html">Tela 01 — Landing Page & Manifesto ODS 2</option>
+        <option value="tela-02-feed-doacoes.html">Tela 02 — Feed Geral de Doações</option>
+        <option value="tela-03-dashboard-esg.html">Tela 03 — Dashboard de Impacto ESG</option>
+        <option value="tela-04-detalhes-lote.html">Tela 04 — Detalhes do Lote de Alimentos</option>
+        <option value="tela-05-modal-reserva.html">Tela 05 — Modal de Reserva & Código</option>
+        <option value="tela-06-login-cadastro.html">Tela 06 — Cadastro Doador vs. ONG</option>
+        <option value="tela-07-formulario-doacao.html">Tela 07 — Cadastro Rápido do Feirante</option>
+        <option value="tela-08-painel-doador.html">Tela 08 — Painel do Doador & Validação</option>
+        <option value="tela-09-painel-ong.html">Tela 09 — Painel da ONG & Coletas</option>
+        <option value="tela-10-mapa-feiras.html">Tela 10 — Mapa de Feiras e Resgates</option>
+      </select>
+
+      <div class="device-toggle">
+        <button class="toggle-btn" id="btnMobile" onclick="setDevice('mobile')">📱 Mobile</button>
+        <button class="toggle-btn active" id="btnDesktop" onclick="setDevice('desktop')">💻 Desktop</button>
+      </div>
+
+      <a id="btnExternal" href="tela-01-landing-page.html" target="_blank" style="color: #34d399; text-decoration: none; font-size: 0.85rem; font-weight: 600; padding: 6px 12px; border: 1px solid rgba(52, 211, 153, 0.3); border-radius: 8px;">↗ Abrir Aba Solta</a>
+    </div>
+  </header>
+
+  <main class="main-viewport">
+    <div id="screenWrapper" class="screen-wrapper desktop">
+      <iframe id="previewFrame" src="tela-01-landing-page.html"></iframe>
+    </div>
+  </main>
+
+  <script>
+    const wrapper = document.getElementById('screenWrapper');
+    const iframe = document.getElementById('previewFrame');
+    const btnMobile = document.getElementById('btnMobile');
+    const btnDesktop = document.getElementById('btnDesktop');
+    const btnExternal = document.getElementById('btnExternal');
+    const select = document.getElementById('screenSelect');
+
+    function setDevice(mode) {
+      if (mode === 'mobile') {
+        wrapper.className = 'screen-wrapper mobile';
+        btnMobile.classList.add('active');
+        btnDesktop.classList.remove('active');
+      } else {
+        wrapper.className = 'screen-wrapper desktop';
+        btnDesktop.classList.add('active');
+        btnMobile.classList.remove('active');
+      }
+    }
+
+    function changeScreen(url) {
+      iframe.src = url;
+      btnExternal.href = url;
+    }
+  </script>
+</body>
+</html>
