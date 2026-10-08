@@ -1,31 +1,45 @@
-# dependencies
-Front/node_modules
-Front/.pnp
-Front/.pnp.js
+# ==========================================
+# Git Ignore — Monorepo (Front & Back)
+# Rede Antidesperdício
+# ==========================================
 
-# testing
-Front/coverage
+# Dependencies (Recursivo para Front e Back)
+node_modules/
+.pnp/
+.pnp.js
 
-# next.js
-Front/.next/
-Front/out/
+# Production & Builds
+.next/
+out/
+build/
+dist/
 
-# production
-Front/build
-
-# misc
-Front/.DS_Store
+# Environment Variables & Secrets
+.env
+.env*.local
+*.env
 *.pem
 
-# debug
-Front/npm-debug.log*
-Front/yarn-debug.log*
-Front/yarn-error.log*
+# Logs & Diagnostics
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
 
-# local env files
-Front/.env*.local
-Front/.env
+# SQLite Locks & Journals (Permite versionar .sqlite/.db, mas ignora locks temporários)
+*.db-journal
+*.sqlite-journal
+*.sqlite3-journal
+*.db-wal
+*.db-shm
 
-# typescript
-Front/*.tsbuildinfo
-Front/next-env.d.ts
+# OS & Editor Files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# TypeScript
+*.tsbuildinfo
+next-env.d.ts
