@@ -3,7 +3,7 @@
 > **Projeto de Frameworks Front-end (SENAI)**  
 > **Grupo B:** Felipe Pinheiro Lopes, Anthony e Nicolas  
 > **Tema:** ODS 2 — Fome Zero e Agricultura Sustentável (interseção com ODS 12.3)  
-> **Deploy Front-end:** [Acessar Vercel](https://grupo-b-projeto-rede-antidesperdicio.vercel.app/) | **Deploy API Back-end:** [Acessar Render](https://grupo-b-projeto-rede-antidesperdicio.onrender.com/) | **Protótipo / Documentação de Telas:** [Visualizar 10 Telas](./docs/06%20-%20Prototipação%20e%20Arquitetura%20de%20Telas.md)
+> **Deploy Front-end:** [Acessar Vercel](https://front-dusky-eight-87.vercel.app/) | **Deploy API Back-end:** [Acessar Render](https://grupo-b-projeto-rede-antidesperd-cio.onrender.com/) | **Protótipo / Documentação de Telas:** [Visualizar 10 Telas](./docs/06%20-%20Prototipação%20e%20Arquitetura%20de%20Telas.md)
 
 ---
 
@@ -352,8 +352,8 @@ flowchart TD
 
 ## 🌐 Aplicação
 
-* **URL da Aplicação Web (Front-end Vercel):** [https://grupo-b-projeto-rede-antidesperdicio.vercel.app/](https://grupo-b-projeto-rede-antidesperdicio.vercel.app/)
-* **URL da API REST (Back-end Render):** [https://grupo-b-projeto-rede-antidesperdicio.onrender.com/](https://grupo-b-projeto-rede-antidesperdicio.onrender.com/)
+* **URL da Aplicação Web (Front-end Vercel):** [https://front-dusky-eight-87.vercel.app/](https://front-dusky-eight-87.vercel.app/)
+* **URL da API REST (Back-end Render):** [https://grupo-b-projeto-rede-antidesperd-cio.onrender.com/](https://grupo-b-projeto-rede-antidesperd-cio.onrender.com/)
 * **URL do Repositório Git:** [https://github.com/Felipe-Pinheiro-Lopes/Grupo_B_Projeto_Rede_Antidesperd-cio](https://github.com/Felipe-Pinheiro-Lopes/Grupo_B_Projeto_Rede_Antidesperd-cio)
 * **URL do Protótipo / Documentação de Telas:** [Visualizar Documento de 10 Telas](https://github.com/Felipe-Pinheiro-Lopes/Grupo_B_Projeto_Rede_Antidesperd-cio/blob/main/docs/06%20-%20Prototipa%C3%A7%C3%A3o%20e%20Arquitetura%20de%20Telas.md)
 
