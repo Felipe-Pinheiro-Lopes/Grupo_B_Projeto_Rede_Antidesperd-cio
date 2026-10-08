@@ -39,6 +39,7 @@ pnpm-debug.log*
 Thumbs.db
 .vscode/
 .idea/
+.obsidian/
 
 # TypeScript
 *.tsbuildinfo
