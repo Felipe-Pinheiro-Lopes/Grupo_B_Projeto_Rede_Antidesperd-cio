@@ -1,0 +1,31 @@
+# dependencies
+Front/node_modules
+Front/.pnp
+Front/.pnp.js
+
+# testing
+Front/coverage
+
+# next.js
+Front/.next/
+Front/out/
+
+# production
+Front/build
+
+# misc
+Front/.DS_Store
+*.pem
+
+# debug
+Front/npm-debug.log*
+Front/yarn-debug.log*
+Front/yarn-error.log*
+
+# local env files
+Front/.env*.local
+Front/.env
+
+# typescript
+Front/*.tsbuildinfo
+Front/next-env.d.ts
