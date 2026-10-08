@@ -1,0 +1,27 @@
+{
+  "name": "rede-antidesperdicio-backend",
+  "version": "1.0.0",
+  "description": "API REST Backend Node.js/Express + SQLite para a plataforma Rede Antidesperdício - Conexão Fome Zero",
+  "main": "src/server.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "seed": "node src/seed.js"
+  },
+  "keywords": [
+    "express",
+    "sqlite",
+    "esg",
+    "fome-zero",
+    "rede-antidesperdicio"
+  ],
+  "author": "Nicolas",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "sql.js": "^1.12.0"
+  }
+}
