@@ -28,7 +28,7 @@ gantt
     
     section Hora 1 (00:00 - 01:00)
     Estruturação Docs Obsidian & Repositório :active, 00:00, 00:25
-    Setup Front-end Vite React + Design Tokens : 00:20, 00:50
+    Setup Front-end Next.js + Design Tokens : 00:20, 00:50
     Setup Back-end Express + SQLite + Seeds : 00:25, 01:00
     
     section Hora 2 (01:00 - 02:00)
@@ -68,7 +68,7 @@ Abaixo está o mapa de commits reais e modulares para cumprir com rigor a exigê
 15. `feat(api): adiciona rota get /api/metrics/esg para consolidação de impacto`
 
 ### Bloco C: Engenharia Front-end & UI (Commits 16 a 26)
-16. `feat(ui): inicializa projeto react com vite e estrutura modular`
+16. `feat(ui): inicializa projeto front-end com next.js e estrutura modular`
 17. `style(theme): cria design tokens com paleta biofílica esg e tipografia outfit`
 18. `feat(ui): implementa navbar de navegação com badges e logo responsivo`
 19. `feat(ui): implementa hero banner institucional com manifesto fome zero`
